@@ -9,4 +9,4 @@ echo "$count" > push-count.txt
 
 sudo git commit -m "$count"
 
-git push -u origin gh-pages
+git push origin gh-pages
