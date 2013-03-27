@@ -300,6 +300,10 @@ a:focus {
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
 
+.drop {
+    display: none;
+}
+
 /* Clock */
 #clock {
     position: relative;
