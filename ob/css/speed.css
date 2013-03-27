@@ -302,6 +302,7 @@ a:focus {
 
 /* Clock */
 #clock {
+    float: left;
     position: relative;
     width: 120px;
     height: 120px;
