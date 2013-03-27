@@ -300,3 +300,105 @@ a:focus {
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
 
+/* Clock */
+#clock {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: #02f702;
+    margin: 20px auto 0;
+    border: 6px solid #333;
+    
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#clock:after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    width: 120px;
+    left: 0;
+    height: 0px;
+    
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.8);
+    box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.8);
+    
+    z-index: -1;
+}
+
+#clock:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 8px;
+    height: 8px;
+    background: #333;
+    left: 50%;
+    top: 50%;
+    margin: -4px 0 0 -4px;
+    
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/* Hands */
+#clock span.hand {
+    background: #333;
+    position: absolute;
+    left: 50%;
+    -webkit-animation: rotate 60s 9 linear;
+    -webkit-transform-origin: left bottom;
+    -moz-animation: rotate 60s 9 linear;
+    -moz-transform-origin: left bottom;
+    -ms-animation: rotate 60s 9 linear;
+    -ms-transform-origin: left bottom;
+    -o-animation: rotate 60s 9 linear;
+    -o-transform-origin: left bottom;
+    animation: rotate 60s 9 linear;
+    transform-origin: left bottom;
+}
+
+#clock span.hand.minute {
+    height: 50px;
+    width: 4px; 
+    margin-left: -2px;
+    top: 10px;
+    -webkit-animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    -ms-animation-duration: 0.3s;
+    -o-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+}
+
+@-webkit-keyframes rotate {
+    0% { -webkit-transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg);}
+}   
+
+@-moz-keyframes rotate {
+    0% { -moz-transform: rotate(0deg);}
+    100% { -moz-transform: rotate(360deg);}
+}   
+
+@-ms-keyframes rotate {
+    0% { -ms-transform: rotate(0deg);}
+    100% { -ms-transform: rotate(360deg);}
+}   
+
+@-o-keyframes rotate {
+    0% { -o-transform: rotate(0deg);}
+    100% { -o-transform: rotate(360deg);}
+}   
+
+@keyframes rotate {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}   
